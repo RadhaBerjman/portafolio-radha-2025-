@@ -67,7 +67,7 @@ nav a:hover {
 .presentacion {
   font-family: "Courier New", Courier, monospace;
   background-color: rgba(176, 161, 161, 0.443);
-  height: 100vh;
+  min-height: 100vh;
   gap: 20px;
   padding: 70px;
   display: flex;
@@ -108,12 +108,12 @@ nav a:hover {
   font-weight: bold;
   padding: 20px;
   margin-top: 100px;
-  height: 70vh;
+  min-height: 70vh;
   text-align: center;
 }
 /* Seccion de Habilidades*/
 .habilidades {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
@@ -135,19 +135,16 @@ nav a:hover {
 .habilidades .habilidades-iconos {
   font-size: 100px;
   color: slateblue;
-  display: flex; 
-  gap: 100px;
+  gap: 50px;
   /*justify-content: center; 
   align-items: center;
   flex-wrap: wrap; */
-  max-width: 30%; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
 }
 /* Sección de proyectos */
 .proyectos_madre {
-  height: 150vh;
+  min-height: 150vh;
   font-size: 18px;
   color: rgba(141, 58, 58, 0.822);
   font-weight: bold;
@@ -166,7 +163,7 @@ nav a:hover {
 }
 /* Sección de contacto */
 .contacto {
-  height: 100vh;
+  min-height: 100vh;
   font-size: 18px;
   color: rgba(141, 58, 58, 0.822);
   background-color: rgba(176, 161, 161, 0.443);
@@ -215,8 +212,12 @@ footer p {
   display: flex;
 }
 
+section {
+  min-height: 100vh;
+}
+
 /* Responsive */
-@media (max-width: 700px) {
+@media (max-width: 860px) {
   body {
     display: flex;
     flex-direction: column;
@@ -224,10 +225,13 @@ footer p {
   nav {
     flex-direction: column;
   }
-
-  main {
-    padding: 10px;
+  .habilidades-iconos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .proyectos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
-
 
