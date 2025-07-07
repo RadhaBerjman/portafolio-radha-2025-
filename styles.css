@@ -119,7 +119,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
   background-color: rgba(176, 161, 161, 0.443);
 }
 .habilidades-titulo {
@@ -132,45 +132,37 @@ nav a:hover {
   font-size: 18px;
   color: #186b80;
 }
-.habilidades-iconos {
-  font-size: 50px;
+.habilidades .habilidades-iconos {
+  font-size: 100px;
   color: slateblue;
   display: flex; 
-  gap: 20px;
+  gap: 100px;
   /*justify-content: center; 
   align-items: center;
   flex-wrap: wrap; */
   max-width: 30%; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-}
-
-/* Seccion de Footer /Pie de página*/
-footer {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-footer p {
-  margin: 0;
-}
-footer a {
-  color: white;
-  text-decoration: none;
+  justify-content: center;
 }
 /* Sección de proyectos */
-.proyectos {
-  height: 100vh;
+.proyectos_madre {
+  height: 150vh;
   font-size: 18px;
   color: rgba(141, 58, 58, 0.822);
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.proyectos{
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+
 }
 /* Sección de contacto */
 .contacto {
@@ -184,23 +176,58 @@ footer a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
+}
+.contacto_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 20px;
+  width: 300px;
+  border-radius: 25px;
+  padding: 20px;
+  border: 1px solid #186b80;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(176, 161, 161, 0.443);
+  border: 1px solid #186b80;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: rgba(176, 161, 161, 0.443);
 }
 .contacto-links {
-    font-size: 30px;
+    font-size: 50px;
   color: #186b80;
-  
+}
+/* Seccion de Footer /Pie de página*/
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  text-align: center;
+  align-items: center;
+  display: flex;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
   nav {
     flex-direction: column;
   }
-  nav a {
-    margin: 10px 0;
-  }
+
   main {
     padding: 10px;
   }
 }
+
+
